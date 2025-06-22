@@ -34,7 +34,7 @@ public abstract class PlayerMixin {
             this.giveExperiencePoints(expCost);
         }
         else{
-            this.giveExperiencePoints(levelCost * set_level_cost);
+            this.giveExperiencePoints(-levelCost * set_level_cost);
         }
 
         if (this.experienceLevel < 0) {
