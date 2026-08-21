@@ -53,7 +53,7 @@ public class AnvilMenuMixin {
 
         int newCost = set_level_cost * this.cost.get();
 
-        if (!player.hasInfiniteMaterials() && player.totalExperience < newCost) {
+        if (!player.getAbilities().instabuild && player.totalExperience < newCost) {
             if (consistentexpcost$trip) {
                 player.sendSystemMessage(Component.literal("You need " + newCost + " EXP (roughly level " + getMinimumLevelForXp(newCost) + "), but you only have " + player.totalExperience + " EXP").withStyle(ChatFormatting.RED));
                 consistentexpcost$trip = false;
