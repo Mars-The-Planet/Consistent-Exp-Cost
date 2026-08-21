@@ -21,4 +21,13 @@ public class CommonClass {
             return (int) ((4.5 * lvl * lvl) - (162.5 * lvl) + 2220);
         }
     }
+
+    public static int getMinimumLevelForXp(int exp) {
+        int lvl = 0;
+        while (exp >= getTotalXpAtLevel(lvl)) {
+            lvl++;
+        }
+
+        return lvl;
+    }
 }
