@@ -24,7 +24,7 @@ public abstract class EnchantmentMenuMixin {
     public int[] costs;
 
     @Inject(at = @At("HEAD"), method = "getEnchantmentList")
-    public void getEnchantmentList(FeatureFlagSet enabledFeatures, ItemStack stack, int enchantSlot, int level, CallbackInfoReturnable<List<EnchantmentInstance>> cir) {
+    public void getEnchantmentList(ItemStack $$0, int enchantSlot, int level, CallbackInfoReturnable<List<EnchantmentInstance>> cir) {
         if (use_minimal_exp_cost) return;
 
         int newCost = getMinimumLevelForXp(set_level_cost * (enchantSlot + 1));
